@@ -1,0 +1,16 @@
+/config/appconfig.php
+/node_modules
+/public/hot
+/public/storage
+/public/uploads
+/storage/*.key
+/storage/event_logs/*
+/storage/photo_logs/*
+/vendor
+.env
+.env.backup
+.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log

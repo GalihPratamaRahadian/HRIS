@@ -1,0 +1,231 @@
+
+/**********************************
+*   Card
+*
+***********************************
+*/
+.card-for-image {
+	background-size: cover;
+	background-position: center;
+}
+
+.card-title {
+	margin-bottom: 2rem;
+}
+
+.card-title > span {
+	position: relative;
+}
+
+.card-title > span::after {
+	position: absolute;
+	height: 4px;
+	width: calc(100% + 20px);
+	content: "";
+	background-color: #0a003a;
+	top: 20px;
+	left: 0px;
+}
+
+
+.table.dataTable {
+	border-collapse: collapse !important;
+}
+
+ul.ui-autocomplete {
+	z-index: 1100;
+}
+
+.table-md td,
+.table-md th {
+	padding: 10px 15px !important;
+}
+
+.card .card-icon {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+}
+
+.select2-container--default .select2-selection--single {
+	height: auto;
+	min-height: 35px;
+}
+
+.select2-container .select2-selection--single .select2-selection__rendered {
+	padding-left: unset;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow b {
+	left: 25%;
+	top: 60%;
+}
+
+
+/*.dt-button {
+			
+			border-color: #1794ff;
+			border: 1px solid transparent;
+			color: #fff;
+			background-color: #269bff;
+		}*/
+
+.dt-button {
+	cursor: pointer;
+	font-size: 0.875rem;
+	line-height: 1;
+	font-family: "Muli", sans-serif;
+}
+
+.dt-button span:before {
+	font: normal normal normal 24px/1 "Material Design Icons";
+	font-size: inherit;
+	padding-right: 0.3rem;
+}
+
+.buttons-copy {
+	color: #fff;
+	background-color: #269bff;
+	border-color: #269bff;
+}
+
+.buttons-copy:hover {
+	color: #fff;
+	background-color: #0089ff;
+	border-color: #0082f2;
+}
+
+.buttons-copy span:before {
+	content: "\F018F";
+}
+
+.buttons-excel {
+	color: #fff;
+	background-color: #0cca8e;
+	border-color: #0cca8e;
+}
+
+.buttons-excel:hover {
+	color: #fff;
+	background-color: #0aa675;
+	border-color: #099a6c;
+}
+
+.buttons-excel span:before {
+	content: "\F021B";
+}
+
+.buttons-csv {
+	color: #212529;
+	background-color: #FEBA47;
+	border-color: #FEBA47;
+}
+
+.buttons-csv:hover {
+	color: #212529;
+	background-color: #feac21;
+	border-color: #fea714;
+}
+
+.buttons-csv span:before {
+	content: "\F0214";
+}
+
+.buttons-pdf span:before,
+.buttonsPdf span:before {
+	content: "\F0225";
+}
+
+.buttonsPrint span:before {
+	content: "\F042A";
+}
+
+.breadcrumb {
+	border: unset;
+	padding: 0.56rem 1.13rem 0.56rem 0rem;
+}
+
+.table th,
+.jsgrid .jsgrid-table th,
+.table td,
+.jsgrid .jsgrid-table td {
+	padding: 16px 18px;
+	white-space: unset;
+	vertical-align: top;
+}
+
+@media screen and (min-width: 992px) {
+	.float-btn {
+		display: none;
+	}
+}
+
+.float-btn {
+	position: fixed;
+	width: 70px;
+	height: 70px;
+	z-index: 1000;
+	bottom: 60px;
+	right: 40px;
+	font-size: 30pt;
+	border-radius: 35px;
+	text-align: center;
+	box-shadow: 0px 1px 26px 15px rgb(80 80 80 / 12%);
+}
+
+a.nav-link[data-toggle="collapse"]::after {
+	content: '\F0141';
+	font: normal normal normal 24px/1 "Material Design Icons";
+	font-size: 12pt;
+	margin-left: auto;
+	transition: 0.25s;
+}
+
+a.nav-link[data-toggle="collapse"][aria-expanded="true"]::after {
+	transform: rotate(-90deg);
+}
+
+
+.alert-info {
+	border: unset;
+}
+
+
+.table-vertical-middle td,
+.table-vertical-middle th {
+	vertical-align: middle;
+}
+
+.title-banner {
+	border-left: 4px solid #0a003a;
+	padding-left: 8px;
+	font-weight: bold;
+}
+
+.preview-list .preview-item .preview-thumbnail {
+	align-self: flex-start;
+}
+
+.nav .nav-item.dropdown .navbar-dropdown, .navbar-nav .nav-item.dropdown .navbar-dropdown {
+	padding: 0 0 0; 
+}
+
+.btn:focus, .btn:hover {
+	color: #fff;
+}
+
+.google-btn {
+	background: #ecf3fb;
+	color: #277be9;
+	font-weight: 700;
+	padding: 10px 15px;
+	border-radius: 6px;
+	text-decoration: none !important;
+	transition: .25s;
+}
+
+.google-btn:active,
+.google-btn:focus,
+.google-btn:hover {
+	background-color: #cde1fa;
+}

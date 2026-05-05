@@ -1,0 +1,67 @@
+.my-switch {
+    padding-left: 2rem;
+}
+
+.my-switch-checkbox {
+    display: none;
+}
+.my-switch {
+    position: relative;
+}
+.my-switch > .my-switch-label:before {
+    left: -0.25rem;
+    width: 1.75rem;
+    pointer-events: all;
+    border-radius: .5rem;
+    position: absolute;
+    top: .25rem;
+    display: block;
+    height: 1rem;
+    content: "";
+    background-color: #fff;
+    border: #adb5bd solid 1px;
+}
+
+.my-switch > .my-switch-label:after {
+    top: calc(.25rem + 2px);
+    left: calc(-0.25rem + 2px);
+    width: calc(1rem - 4px);
+    height: calc(1rem - 4px);
+    background-color: #adb5bd;
+    border-radius: .5rem;
+    transition: background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out,-webkit-transform .15s ease-in-out;
+    transition: transform .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: transform .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out,-webkit-transform .15s ease-in-out;
+    position: absolute;
+    display: block;
+    content: "";
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+}
+
+.my-switch-checkbox:checked~.my-switch-label::before {
+    color: #fff;
+    border-color: #007bff;
+    background-color: #007bff;
+}
+
+.my-switch .my-switch-checkbox:checked~.my-switch-label::after {
+    background-color: #fff;
+    -webkit-transform: translateX(.75rem);
+    transform: translateX(.75rem);
+}
+
+.must {
+    color: red;
+    font-weight: bolder;
+}
+
+
+/*
+    Show
+*/
+
+.table-sm td, .table-sm th {
+    padding: 7px 2px !important;
+}

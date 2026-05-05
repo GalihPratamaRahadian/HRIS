@@ -1,0 +1,101 @@
+body {
+	background: rgb(216 215 215 / 20%);
+	margin: 0px;
+}
+
+.wrapper {
+	width: 800px;
+    margin: 5rem auto;
+}
+
+.wrapper-register {
+	width: 600px;
+    margin: 5rem auto;
+}
+
+@media screen and (max-width: 900px) {
+	.wrapper {
+		width: 650px;
+	}
+
+	.wrapper-register {
+		width: 550px;
+	}
+}
+@media screen and (max-width: 700px) {
+	.wrapper,
+	.wrapper-register {
+		padding: 0 6rem;
+	}
+}
+@media screen and (max-width: 500px) {
+	.wrapper,
+	.wrapper-register {
+		padding: 0 8rem;
+	}
+}
+
+.auth {
+	background: white;
+    box-shadow: 0 0 16px 3px rgba(0,0,0,0.05);
+    min-height: 380px;
+}
+
+.auth .auth-banner {
+	background-size: cover;
+	background-position: center;
+}
+
+@media screen and (max-width: 700px) {
+	.auth .auth-banner {
+		display: none;
+	}
+}
+
+.auth > .auth-input {
+	padding: 2rem 3rem;
+}
+
+.auth > .auth-input:after {
+	content: "";
+	height: 20px;
+	width: 30px;
+	background-color: red;
+}
+
+.auth .auth-title {
+	margin-bottom: 2.5rem;
+	position: relative;
+}
+
+.auth .auth-title:after {
+	content: "";
+	height: 4px;
+	position: absolute;
+	top: 40px;
+	left: 0px;
+	background-color: #3a6eff;
+	width: 130px;
+	border-radius: 2px;
+}
+
+.form-control {
+	border-radius: 0px;
+}
+
+.form-control:focus {
+	box-shadow: none;
+}
+
+.btn {
+	border-radius: 0px;
+}
+
+.auth-bg-ft {
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}

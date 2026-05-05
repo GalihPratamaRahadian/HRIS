@@ -1,0 +1,81 @@
+@extends('template.backLayout')
+
+
+@section('action')
+@if(user()->isAdmin())
+@if(UserPermission::check('course', 'c'))
+<a href="{{ route('course.create') }}" class="btn btn-success">
+	<i class="mdi mdi-plus-thick"></i> Buat
+</a>
+@endif
+@endif
+@endsection
+
+
+@section('content')
+<div class="row">
+	<div class="col-md-12">
+		<div class="card support-pane-card">
+			<div class="card-body">
+				<div class="d-flex justify-content-between align-items-center mb-3">
+					{!! Template::titleBanner($title) !!}
+				</div>
+
+				<div class="table-responsive support-pane">
+					<table class='table table-bordered table-hover' id="dataTable">
+						<thead>
+							<tr>
+								<th> Judul </th>
+								<th> Tanggal Lulus </th>
+								<th width="100"> Aksi </th>
+							</tr>
+						</thead>
+						<tfoot>
+							<tr>
+								<th> Judul </th>
+								<th> Tanggal Lulus </th>
+								<th width="100"> Aksi </th>
+							</tr>
+						</tfoot>
+					</table>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+@endsection
+
+
+@section('script')
+<script type="text/javascript">
+	$(function(){
+
+		$('#dataTable').DataTable({
+			processing : true,
+			serverSide : true,
+			autoWidth : false,
+			ajax : {
+				url : "{{ route('employee.elearning_certificate') }}"
+			},
+			columns : [
+				{
+					data : "course.course_title",
+					name : "courses.course_title"
+				},
+				{
+					data : "passed_at",
+					name : "passed_at"
+				},
+				{
+					data : 'employee_action',
+					name : 'employee_action',
+					orderable : false,
+					searchable : false,
+				}
+			],
+			order: [[ '1', 'asc' ]]
+		})
+	});
+</script>
+@endsection

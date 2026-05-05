@@ -1,0 +1,92 @@
+.step-wizard {
+	display: flex;
+	width: 100%;
+	position: relative;
+	padding-top: 40px;
+	padding-left: 0px;
+	list-style: none;
+	counter-reset: step-counter;
+}
+
+.step-wizard:before,
+.step-wizard:after {
+	position: absolute;
+	height: 4px;
+	border-radius: 2px;
+	content: "";
+	top: 15px;
+}
+
+.step-wizard:before {
+	width: 100%;
+	background-color: #e0e0e0;
+}
+
+.step-wizard:after {
+	background-color: #269bff;
+	transition: 0.5s;
+}
+
+/*.step-wizard-1:after {
+	width: 12.5%;
+}
+
+.step-wizard-3:after {
+	width: 37.5%;
+}
+
+.step-wizard-5:after {
+	width: 62.5%;
+}
+
+.step-wizard-7:after {
+	width: 87.5%;
+}*/
+
+.step-wizard-1:after {
+	width: 17.5%;
+}
+
+.step-wizard-3:after {
+	width: 50%;
+}
+
+.step-wizard-7:after {
+	width: 83%;
+}
+
+/*.step-wizard>.step-item {
+	flex-basis: 25%;
+	counter-increment: step-counter;
+	position: relative;
+}*/
+
+.step-wizard>.step-item {
+	flex-basis: 33.33%;
+	counter-increment: step-counter;
+	position: relative;
+}
+
+.step-item>.step-title,
+.step-item>.step-subtitle {
+	text-align: center;
+}
+
+.step-subtitle {
+	margin-bottom: 0px;
+}
+
+.step-item:before {
+	position: absolute;
+	top: -35px;
+	left: calc(50% - 12.5px);
+	content: counter(step-counter);
+	height: 25px;
+	width: 25px;
+	padding: 2px;
+	border-radius: 12.5px;
+	background-color: #269bff;
+	color: white;
+	text-align: center;
+	z-index: 200;
+}
